@@ -1,13 +1,13 @@
-# Sample Hardhat Project
+# Price Oracle Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+# Overview
+The PriceOracle contract retrieves and provides real-time price data using Chainlink oracles. It allows the contract owner to update the price feed source dynamically.
 
-Try running some of the following tasks:
+# Features
+Fetch Live Price Data: Retrieves the latest price from the Chainlink AggregatorV3Interface.
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+Supports Multiple Price Feeds: The owner can update the oracle source.
+
+Price Feed Description: Stores the description of the currency pair (e.g., ETH/USD).
+
+Access Control: Only the owner can change the price feed.
